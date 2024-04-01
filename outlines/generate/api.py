@@ -464,9 +464,9 @@ class SequenceGeneratorAdapter:
             prompts, max_tokens, stop_at, seed
         )
         return self.model.generate(
-            generation_params,
-            self.logits_processor,
-            self.sampling_params,
+            generation_parameters=generation_params,
+            logits_processor=self.logits_processor,
+            sampling_parameters=self.sampling_params,
             **model_specific_params,
         )
 

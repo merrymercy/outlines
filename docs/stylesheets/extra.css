@@ -34,6 +34,12 @@
   font-weight: 500;
 }
 
+.md-content p > code {
+  background: #ECEFF4;
+  color: #000000;
+  font-weight: 500;
+}
+
 .md-typeset td > code {
   background: #ECEFF4;
   color: #000000;

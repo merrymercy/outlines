@@ -25,7 +25,7 @@ class VLLM:
     def generate(
         self,
         generation_parameters: GenerationParameters,
-        logits_procesor,
+        logits_processor,
         sampling_parameters: SamplingParameters,
         *,
         sampling_params: Optional["SamplingParams"] = None,
@@ -46,7 +46,7 @@ class VLLM:
             in Outlines.
         samplng_params
             An instance of `vllm.sampling_params.SamplingParams`. The values
-            passed via this dataclass superseded the values of the parameters
+            passed via this dataclass supersede the values of the parameters
             in `generation_parameters` and `sampling_parameters`. See the
             vLLM documentation for more details: https://docs.vllm.ai/en/latest/dev/sampling_params.html.
 
@@ -76,7 +76,7 @@ class VLLM:
             sampling_params.seed = seed
 
         sampling_params.logits_processors = (
-            [logits_procesor] if logits_procesor is not None else []
+            [logits_processor] if logits_processor is not None else []
         )
 
         sampler, num_samples, top_p, top_k, temperature = dataclasses.astuple(
